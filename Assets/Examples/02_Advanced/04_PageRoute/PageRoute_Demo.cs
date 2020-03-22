@@ -4,6 +4,7 @@ using Unity.UIWidgets.engine;
 using Unity.UIWidgets.material;
 using Unity.UIWidgets.ui;
 using Unity.UIWidgets.widgets;
+using Color = Unity.UIWidgets.ui.Color;
 using Curve = Unity.UIWidgets.animation.Curve;
 using Curves = Unity.UIWidgets.animation.Curves;
 using OffsetTween = Unity.UIWidgets.animation.OffsetTween;
@@ -65,6 +66,7 @@ public class PageRoute : StatelessWidget
     {
         return new PageRouteBuilder(
             pageBuilder: (context, animation, secondaryAnimation) => new Page2(),
+            barrierColor: Color.black, //过度背景色，页面退出时显示
             transitionsBuilder: (context, animation, secondaryAnimation, child) =>
             {
                 Offset begin = new Offset(1.0f, 0.0f);
@@ -82,7 +84,9 @@ public class PageRoute : StatelessWidget
     // 淡入效果
     public static Route _createRoute_Mat()
     {
-        return new MaterialPageRoute(builder: (BuildContext context) => new Page2());
+        return new MaterialPageRoute(
+            builder: (BuildContext context) => new Page2()
+        );
     }
 
     public class Page1 : StatelessWidget

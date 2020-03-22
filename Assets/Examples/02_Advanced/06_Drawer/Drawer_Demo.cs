@@ -15,7 +15,6 @@ public class Drawer_Demo : UIWidgetsPanel
 
     protected override Widget createWidget()
     {
-        //return new DrawerWidget();
         return new MaterialApp(
             title: "Flutter Demo",
             theme: new ThemeData(

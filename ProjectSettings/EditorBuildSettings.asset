@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Examples/01_Basic/03_TextField/03_TextField.unity
-    guid: ebf672f68df284545a086dd615170e65
+    path: Assets/Examples/02_Advanced/04_PageRoute/04_PageRoute.unity
+    guid: 4e5b859f34bc6dc43a2c7af668d78695
   m_configObjects: {}

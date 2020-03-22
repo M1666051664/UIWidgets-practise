@@ -30,6 +30,11 @@ public class PageRoute : StatelessWidget
     public override Widget build(BuildContext context)
     {
         return new MaterialApp(
+            theme: new ThemeData(
+                pageTransitionsTheme: new PageTransitionsTheme(
+                    builder: new FadeUpwardsPageTransitionsBuilder()
+                )
+            ),
             home: new Page1()
         );
     }
@@ -88,16 +93,34 @@ public class PageRoute : StatelessWidget
                 appBar: new AppBar(
                     title: new Text("Page1")
                 ),
-                body: new Center(
-                    child: new RaisedButton(
-                        child: new Text("Go!"),
-                        onPressed: () =>
-                        {
-                            //Navigator.of(context).push(_createRoute());
-                            //Navigator.of(context).push(_createRoute_RL());
-                            Navigator.of(context).push(_createRoute_Mat());
-                        }
-                    )
+                body: new ListView( // ListView/Stack/Row/Column可以容纳多个子物体children
+                    children: new List<Widget>()
+                    {
+                        new Container(height: 10),
+                        new RaisedButton(
+                            child: new Text("默认"),
+                            onPressed: () =>
+                            {
+                                Navigator.of(context).push(_createRoute());
+                            }
+                        ),
+                        new Container(height: 10),
+                        new RaisedButton(
+                            child: new Text("动画"),
+                            onPressed: () =>
+                            {
+                                Navigator.of(context).push(_createRoute_RL());
+                            }
+                        ),
+                        new Container(height: 10),
+                        new RaisedButton(
+                            child: new Text("渐变"),
+                            onPressed: () =>
+                            {
+                                Navigator.of(context).push(_createRoute_Mat());
+                            }
+                        )
+                    }
                 )
             );
         }

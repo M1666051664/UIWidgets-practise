@@ -22,6 +22,7 @@
 - [x] [Login](https://medium.com/flutterpub/flutter-how-to-do-user-login-with-firebase-a6af760b14d5)
 - [ ] [Search Bar](https://medium.com/flutterpub/search-bar-in-flutter-5aedf2c86b44)
 - [x] Simple Emoji
+- [x] [Page Route](https://flutter.dev/docs/cookbook/animation/page-route-animation)
 - [ ] [Bottom Bar](https://medium.com/flutterpub/a-better-bottom-bar-c47dcaf4c730)
 - [ ] [Bottom Navigation](https://medium.com/flutterpub/flutter-6-bottom-navigation-38b202d9ca23)
 - [ ] [Liquid Cards](https://medium.com/flutterpub/create-gradient-on-button-in-flutter-cad65b8b3da4)
@@ -30,5 +31,7 @@
 - [ ] [Stacked Cards](https://medium.com/flutterpub/flutter-animation-basics-explained-with-stacked-cards-9d34108403b8)
 - [ ] [Todo Animation](https://medium.com/flutterpub/flutter-todo-animation-development-journey-4da80e18ec5e)
 - [ ] [完整实例](https://medium.com/flutter-community/building-a-multi-platform-travel-app-with-flutter-with-code-samples-9a30a40afc1a)
+- [ ] [Flutter侧滑删除控件](https://blog.csdn.net/ZYJWR/article/details/93411016)
+- [ ] [PageView左右滑动切换视图](https://blog.csdn.net/zl18603543572/article/details/94706877)
 ### UI交互
 - [ ] Slide

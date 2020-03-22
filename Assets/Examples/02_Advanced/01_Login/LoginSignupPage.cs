@@ -179,15 +179,19 @@ namespace Flutter
                     child: new SizedBox(
                         height: 40.0f,
                         child: new RaisedButton(
-                            elevation: 5.0f,
+                            elevation: 2.0f, //阴影
                             shape: new RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30.0f)),
+                                borderRadius: BorderRadius.circular(20.0f)
+                            ),
                             color: Colors.blue,
-                            child: new Text(_isLoginForm ? "Login" : "Create account",
-                            style: new TextStyle(fontSize: 20.0f, color: Colors.white)),
+                            child: new Text(
+                                _isLoginForm ? "Login" : "Create account",
+                                style: new TextStyle(fontSize: 20.0f, color: Colors.white)
+                            ),
                             onPressed: validateAndSubmit
                         )
-                    ));
+                    )
+                );
             }
             void validateAndSubmit()
             {

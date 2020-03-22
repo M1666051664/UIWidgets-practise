@@ -14,10 +14,11 @@
 - [x] HelloWorld(Text,MaterialApp,AppBar,StatefulWidget,State)
 - [x] Image(children,Image,Column,StatelessWidget)
 - [x] TextField(TextField,)
+- [ ] GradientButton(RaisedButton)
 - [ ] Layout(Center,Container,Column,Row,Table)
 ### 组合应用
 - [x] [Login](https://medium.com/flutterpub/flutter-how-to-do-user-login-with-firebase-a6af760b14d5)
 - [ ] [Search Bar](https://medium.com/flutterpub/search-bar-in-flutter-5aedf2c86b44)
-- [ ] Navigation
+- [ ] [Bottom Bar](https://medium.com/flutterpub/a-better-bottom-bar-c47dcaf4c730)
 ### UI交互
 - [ ] Slide

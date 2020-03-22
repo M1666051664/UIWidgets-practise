@@ -15,7 +15,7 @@
 - [x] Image(children,Image,Column,StatelessWidget)
 - [x] TextField(TextField,)
 - [x] [GradientButton(RaisedButton)](https://medium.com/flutterpub/create-gradient-on-button-in-flutter-cad65b8b3da4)
-- [ ] [AppBar](https://medium.com/flutterpub/playing-with-appbar-in-flutter-3a8abd9b982a)
+- [x] [AppBar](https://medium.com/flutterpub/playing-with-appbar-in-flutter-3a8abd9b982a)
 - [ ] [Table](https://medium.com/flutterpub/table-in-flutter-faaf0b5f6a0b)
 - [ ] Layout(Center,Container,Column,Row)
 ### 组合应用
@@ -29,5 +29,6 @@
 - [ ] [Bottom Sheet](https://medium.com/flutterpub/flutter-5-bottom-sheet-2d56bf9f3bc)
 - [ ] [Stacked Cards](https://medium.com/flutterpub/flutter-animation-basics-explained-with-stacked-cards-9d34108403b8)
 - [ ] [Todo Animation](https://medium.com/flutterpub/flutter-todo-animation-development-journey-4da80e18ec5e)
+- [ ] [完整实例](https://medium.com/flutter-community/building-a-multi-platform-travel-app-with-flutter-with-code-samples-9a30a40afc1a)
 ### UI交互
 - [ ] Slide

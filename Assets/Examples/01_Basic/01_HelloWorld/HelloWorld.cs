@@ -9,20 +9,11 @@ using Color = Unity.UIWidgets.ui.Color;
 
 public class HelloWorld : StatefulWidget
 {
-    // 构造方法
-    public HelloWorld(Key key = null, VoidCallback onSendFeedback = null) : base(key: key)
-    {
-        this.onSendFeedback = onSendFeedback;
-    }
-
-    public readonly VoidCallback onSendFeedback;
-
     public override State createState()
     {
         return new _HelloWorldState();
     }
 
-    // 实现方法
     class _HelloWorldState : State<HelloWorld>
     {
         #region 参数

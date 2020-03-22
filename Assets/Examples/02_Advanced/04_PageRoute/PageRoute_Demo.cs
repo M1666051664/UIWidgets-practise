@@ -34,6 +34,52 @@ public class PageRoute : StatelessWidget
         );
     }
 
+    public static Widget _getCenterWidget(Widget child)
+    {
+        return new Scaffold(
+            appBar: new AppBar(),
+            body: new Center(
+                child: child
+            )
+        );
+    }
+
+    // 无效果
+    public static Route _createRoute()
+    {
+        return new PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => new Page2(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            {
+                return child;
+            }
+        );
+    }
+    // 从右往左
+    public static Route _createRoute_RL()
+    {
+        return new PageRouteBuilder(
+            pageBuilder: (context, animation, secondaryAnimation) => new Page2(),
+            transitionsBuilder: (context, animation, secondaryAnimation, child) =>
+            {
+                Offset begin = new Offset(1.0f, 0.0f);
+                Offset end = Offset.zero;
+                Curve curve = Curves.ease;
+                    //var tween = Tween(begin: begin, end: end).chain(new CurveTween(curve: curve));
+                    var tween = new OffsetTween(begin: begin, end: end).chain(new CurveTween(curve: curve));
+                return new SlideTransition(
+                    position: animation.drive(tween),
+                    child: child
+                );
+            }
+        );
+    }
+    // 淡入效果
+    public static Route _createRoute_Mat()
+    {
+        return new MaterialPageRoute(builder: (BuildContext context) => new Page2());
+    }
+
     public class Page1 : StatelessWidget
     {
         public override Widget build(BuildContext context)
@@ -47,40 +93,12 @@ public class PageRoute : StatelessWidget
                         child: new Text("Go!"),
                         onPressed: () =>
                         {
-                            Navigator.of(context).push(_createRoute_RL());
+                            //Navigator.of(context).push(_createRoute());
+                            //Navigator.of(context).push(_createRoute_RL());
+                            Navigator.of(context).push(_createRoute_Mat());
                         }
                     )
                 )
-            );
-        }
-
-        public Route _createRoute()
-        {
-            return new PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) => new Page2(),
-                transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-                {
-                    return child;
-                }
-            );
-        }
-
-        public Route _createRoute_RL()
-        {
-            return new PageRouteBuilder(
-                pageBuilder: (context, animation, secondaryAnimation) => new Page2(),
-                transitionsBuilder: (context, animation, secondaryAnimation, child) =>
-                {
-                    Offset begin = new Offset(1.0f, 0.0f);
-                    Offset end = Offset.zero;
-                    Curve curve = Curves.ease;
-                    //var tween = Tween(begin: begin, end: end).chain(new CurveTween(curve: curve));
-                    var tween = new OffsetTween(begin: begin, end: end).chain(new CurveTween(curve: curve));
-                    return new SlideTransition(
-                        position: animation.drive(tween),
-                        child: child
-                    );
-                }
             );
         }
     }
@@ -97,6 +115,15 @@ public class PageRoute : StatelessWidget
                     child: new Text("Page 2")
                 )
             );
+        }
+    }
+
+    public class Page3 : StatelessWidget
+    {
+        public override Widget build(BuildContext context)
+        {
+            Navigator.of(context).pop(); //1s后退出
+            return _getCenterWidget(new Text("Page3"));
         }
     }
 }

@@ -24,7 +24,7 @@
 - [x] Simple Emoji
 - [x] [Page Route](https://flutter.dev/docs/cookbook/animation/page-route-animation)
 - [ ] [Bottom Bar](https://medium.com/flutterpub/a-better-bottom-bar-c47dcaf4c730)
-- [ ] [Bottom Navigation](https://medium.com/flutterpub/flutter-6-bottom-navigation-38b202d9ca23)
+- [x] [Drawer](https://gist.github.com/branflake2267/87e0a21eff8736a83646ef8c67c1ba6c)
 - [ ] [Liquid Cards](https://medium.com/flutterpub/create-gradient-on-button-in-flutter-cad65b8b3da4)
 - [ ] [Loading](https://medium.com/flutterpub/lunching-other-screen-after-delay-in-flutter-c9ebf4d7406e)
 - [ ] [Bottom Sheet](https://medium.com/flutterpub/flutter-5-bottom-sheet-2d56bf9f3bc)

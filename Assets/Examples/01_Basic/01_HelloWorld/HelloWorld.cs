@@ -1,10 +1,8 @@
 ﻿using UnityEngine;
-using Unity.UIWidgets.engine;
-using Unity.UIWidgets.painting;
 using Unity.UIWidgets.ui;
 using Unity.UIWidgets.widgets;
-using Unity.UIWidgets.foundation;
 using Unity.UIWidgets.material;
+using Unity.UIWidgets.painting;
 using Color = Unity.UIWidgets.ui.Color;
 
 public class HelloWorld : StatefulWidget

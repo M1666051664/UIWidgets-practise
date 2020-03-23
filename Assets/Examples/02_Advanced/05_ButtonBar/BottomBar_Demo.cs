@@ -1,13 +1,9 @@
 ﻿using System.Collections.Generic;
-using System;
 using UnityEngine;
 using Unity.UIWidgets.engine;
 using Unity.UIWidgets.material;
 using Unity.UIWidgets.ui;
 using Unity.UIWidgets.widgets;
-using Unity.UIWidgets.scheduler;
-using Unity.UIWidgets.foundation;
-using Unity.UIWidgets.rendering;
 using Material = Unity.UIWidgets.material.Material;
 
 public class BottomBar_Demo : UIWidgetsPanel
@@ -51,6 +47,7 @@ public class BottomBar : StatefulWidget
             return new MaterialApp(
                 home: new Scaffold(
                     body: new TabBarView(
+                        physics: new NeverScrollableScrollPhysics(), //禁止手势滑动
                         controller: controller,
                         children: new List<Widget>()
                         {

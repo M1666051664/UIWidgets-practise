@@ -25,7 +25,7 @@
 - [x] [Drawer](https://gist.github.com/branflake2267/87e0a21eff8736a83646ef8c67c1ba6c)
 - [ ] [打开新页面传值](https://flutter.dev/docs/cookbook/navigation/passing-data)
 - [ ] [Search Bar](https://medium.com/flutterpub/search-bar-in-flutter-5aedf2c86b44)
-- [ ] [Bottom Bar](https://medium.com/flutterpub/a-better-bottom-bar-c47dcaf4c730)
+- [x] [Bottom Bar](https://medium.com/flutterpub/a-better-bottom-bar-c47dcaf4c730)
 - [ ] [Scaffold 组件系列](https://my.oschina.net/u/2447911/blog/3149087)
 - [ ] [Liquid Cards](https://medium.com/flutterpub/create-gradient-on-button-in-flutter-cad65b8b3da4)
 - [ ] [Loading](https://medium.com/flutterpub/lunching-other-screen-after-delay-in-flutter-c9ebf4d7406e)

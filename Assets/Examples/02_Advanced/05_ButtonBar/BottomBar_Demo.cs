@@ -1,20 +1,19 @@
 ﻿using System.Collections.Generic;
+using System;
 using UnityEngine;
 using Unity.UIWidgets.engine;
 using Unity.UIWidgets.material;
 using Unity.UIWidgets.ui;
 using Unity.UIWidgets.widgets;
-using Curve = Unity.UIWidgets.animation.Curve;
-using Curves = Unity.UIWidgets.animation.Curves;
-using OffsetTween = Unity.UIWidgets.animation.OffsetTween;
-using CurveTween = Unity.UIWidgets.animation.CurveTween;
+using Unity.UIWidgets.scheduler;
+using Unity.UIWidgets.foundation;
 using Unity.UIWidgets.rendering;
+using Material = Unity.UIWidgets.material.Material;
 
 public class BottomBar_Demo : UIWidgetsPanel
 {
     protected override void OnEnable()
     {
-        // add material icons, familyName must be "Material Icons"
         FontManager.instance.addFont(Resources.Load<Font>("fonts/MaterialIcons-Regular"), "Material Icons");
 
         base.OnEnable();
@@ -33,30 +32,53 @@ public class BottomBar : StatefulWidget
         return new _BottomBarState();
     }
 
-    class _BottomBarState : State<BottomBar> 
+    class _BottomBarState : SingleTickerProviderStateMixin<BottomBar>
     {
-        int _cIndex = 0;
+        TabController controller;
 
-        void _incrementTab(int index)
+        public override void initState()
         {
-            setState(() => {
-                _cIndex = index;
-            });
+            base.initState();
+
+            controller = new TabController(
+                length: 3,
+                vsync: this
+            );
         }
 
         public override Widget build(BuildContext context)
         {
             return new MaterialApp(
                 home: new Scaffold(
-                    appBar: new AppBar(
-                        title: new Text("Flutter Bottombar")
+                    body: new TabBarView(
+                        controller: controller,
+                        children: new List<Widget>()
+                        {
+                            new Today(),
+                            new KB(),
+                            new Playground()
+                        }
                     ),
-                    body: new Center(
-                        child: new Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: new List<Widget>()
+                    bottomNavigationBar: new Material(
+                        color: Colors.white,
+                        child: new TabBar(
+                            controller: controller,
+                            labelColor: Colors.deepPurpleAccent,
+                            unselectedLabelColor: Colors.black26,
+                            tabs: new List<Widget>()
                             {
-                                new Text("BottomBar")
+                                new Tab(
+                                    text: "今日",
+                                    icon: new Icon(Icons.brightness_5)
+                                ),
+                                new Tab(
+                                    text: "课表",
+                                    icon: new Icon(Icons.map)
+                                ),
+                                new Tab(
+                                    text: "操场",
+                                    icon: new Icon(Icons.directions_run)
+                                )
                             }
                         )
                     )

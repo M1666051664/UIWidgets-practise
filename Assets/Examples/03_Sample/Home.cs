@@ -18,7 +18,7 @@ public class Home : StatefulWidget
 
     class _HomeState : State<Home>
     {
-        int currentTab = 0; // to keep track of active tab index
+        int currentTab = 3; // to keep track of active tab index
         public List<Widget> screens = new List<Widget>()
         {
             new Dashboard(),
@@ -27,7 +27,7 @@ public class Home : StatefulWidget
             new Settings()
         }; // to store nested tabs
         PageStorageBucket bucket = new PageStorageBucket();
-        Widget currentScreen = new Dashboard(); // Our first view in viewport
+        Widget currentScreen = new Settings(); // Our first view in viewport
 
         public override void dispose()
         {
@@ -63,7 +63,7 @@ public class Home : StatefulWidget
                     child: new Container(
                         height: 60,
                         child: new Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween, //有中央按钮
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween, //左右分居
                             children: new List<Widget>()
                             {
                                 // Left Tab bar icons
@@ -72,7 +72,8 @@ public class Home : StatefulWidget
                                     children: new List<Widget>()
                                     {
                                         new MaterialButton(
-                                            minWidth: 100,
+                                            height:100,
+                                            minWidth: 80,
                                             onPressed: () =>
                                             {
                                                 setState(() =>
@@ -87,7 +88,8 @@ public class Home : StatefulWidget
                                             )
                                         ),
                                         new MaterialButton(
-                                            minWidth: 100,
+                                            height:100,
+                                            minWidth: 80,
                                             onPressed: () =>
                                             {
                                                 setState(() =>
@@ -98,18 +100,19 @@ public class Home : StatefulWidget
                                             },
                                             child: new Icon(
                                                 Icons.chat,
-                                                color: currentTab == 1 ? Colors.blue : Colors.grey
+                                                color: currentTab == 1 ? Colors.black : Colors.grey
                                             )
                                         )
                                     }
                                 ),
                                 // Right Tab bar icons
                                 new Row(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
+                                    crossAxisAlignment: CrossAxisAlignment.end,
                                     children: new List<Widget>()
                                     {
                                         new MaterialButton(
-                                            minWidth: 100,
+                                            height:100,
+                                            minWidth: 80,
                                             onPressed: () =>
                                             {
                                                 setState(() =>
@@ -120,11 +123,12 @@ public class Home : StatefulWidget
                                             },
                                             child: new Icon(
                                                 Icons.panorama,
-                                                color: currentTab == 2 ? Colors.blue : Colors.grey
+                                                color: currentTab == 2 ? Colors.black : Colors.grey
                                             )
                                         ),
                                         new MaterialButton(
-                                            minWidth: 100,
+                                            height:100,
+                                            minWidth: 80,
                                             onPressed: () =>
                                             {
                                                 setState(() =>
@@ -135,7 +139,7 @@ public class Home : StatefulWidget
                                             },
                                             child: new Icon(
                                                 Icons.settings,
-                                                color: currentTab == 3 ? Colors.blue : Colors.grey
+                                                color: currentTab == 3 ? Colors.black : Colors.grey
                                             )
                                         )
                                     }

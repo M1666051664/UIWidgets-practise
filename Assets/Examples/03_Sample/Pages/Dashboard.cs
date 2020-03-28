@@ -1,8 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using Unity.UIWidgets.ui;
 using Unity.UIWidgets.material;
 using Unity.UIWidgets.widgets;
-using UnityEngine;
+using Unity.UIWidgets.painting;
+using Color = Unity.UIWidgets.ui.Color;
 
 public class Dashboard : StatefulWidget
 {
@@ -27,7 +30,16 @@ public class Dashboard : StatefulWidget
         {
             return new Scaffold(
                 appBar: new AppBar(
-                    title: new Text("Dashboard")
+                    bottom: new PreferredSize(preferredSize: Size.fromHeight(0)), //默认高度
+                    title: new Text(
+                        "Dashboard",
+                        style: new TextStyle(
+                            color: Colors.black,
+                            fontSize: 32
+                        )
+                    ),
+                    backgroundColor: Colors.white,
+                    elevation: 0 //阴影
                 )
             );
         }

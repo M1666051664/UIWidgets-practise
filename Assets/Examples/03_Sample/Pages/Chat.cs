@@ -1,17 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using Unity.UIWidgets.material;
-using Unity.UIWidgets.widgets;
 using UnityEngine;
+using Unity.UIWidgets.material;
+using Unity.UIWidgets.painting;
+using Unity.UIWidgets.widgets;
 
-public class Profile : StatefulWidget
+public class Chat : StatefulWidget
 {
     public override State createState()
     {
-        return new _ProfileState();
+        return new _ChatState();
     }
 
-    class _ProfileState : State<Profile>
+    class _ChatState : State<Chat>
     {
         public override void initState()
         {
@@ -27,7 +28,14 @@ public class Profile : StatefulWidget
         {
             return new Scaffold(
                 appBar: new AppBar(
-                    title: new Text("Profile")
+                    title: new Text(
+                        "Chat",
+                        style: new TextStyle(
+                            color: Colors.black
+                        )
+                    ),
+                    backgroundColor: Colors.white,
+                    elevation: 0
                 )
             );
         }

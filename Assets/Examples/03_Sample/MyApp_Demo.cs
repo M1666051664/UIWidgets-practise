@@ -11,6 +11,9 @@ public class MyApp_Demo : UIWidgetsPanel
 {
     protected override void OnEnable()
     {
+        Screen.fullScreen = false;
+        //UnityEditor.PlayerSettings.statusBarHidden = false;
+
         FontManager.instance.addFont(Resources.Load<Font>("fonts/MaterialIcons-Regular"), "Material Icons");
 
         base.OnEnable();

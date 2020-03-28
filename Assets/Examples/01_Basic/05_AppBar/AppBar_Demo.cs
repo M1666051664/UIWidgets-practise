@@ -40,11 +40,6 @@ public class AppBarWidget : StatelessWidget
         return new MaterialApp(
             home: new Scaffold(
                 appBar: new AppBar(
-                    actionsIconTheme: new IconThemeData(
-                        size: 30.0f,
-                        color: Colors.red,
-                        opacity: 10.0f
-                    ),
                     title: new Text("Hello Appbar"),
                     //leading: new Icon(
                     //    Icons.menu //需要导入字体资源
@@ -59,6 +54,11 @@ public class AppBarWidget : StatelessWidget
                         )
                     ),
                     automaticallyImplyLeading: false, //与leading配合使用，自动关联图标
+                    actionsIconTheme: new IconThemeData(
+                        size: 30.0f,
+                        color: Colors.red,
+                        opacity: 10.0f
+                    ),
                     actions: new List <Widget>()
                     {
                         new Padding(

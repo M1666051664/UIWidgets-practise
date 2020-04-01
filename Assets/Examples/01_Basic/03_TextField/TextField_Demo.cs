@@ -15,6 +15,7 @@ public class TextField_Demo : UIWidgetsPanel
     {
         //return new TextFieldWidget(); //无状态
         return new FocusTestRoute(); //保存状态
+        //return new MultiLines();
     }
 }
 
@@ -41,6 +42,29 @@ public class TextFieldWidget : StatelessWidget
         );
     }
 }
+
+//public class MultiLines : StatelessWidget
+//{
+//    public override Widget build(BuildContext context)
+//    {
+//        return new MaterialApp(
+//            home: new Scaffold(
+//                body: new Container(
+//                    width: 200,
+//                    alignment: Alignment.bottomCenter,
+//                    child: new TextField(
+//                        keyboardType: TextInputType.multiline,
+//                        textInputAction: TextInputAction.newline,
+//                        textAlign: TextAlign.left,
+//                        textDirection: TextDirection.ltr,
+//                        minLines: 1,
+//                        maxLines: 3
+//                    )
+//                )
+//            )
+//        );
+//    }
+//}
 
 // TextField 保存状态需要使用 StatefulWidget
 public class FocusTestRoute : StatefulWidget
@@ -112,12 +136,34 @@ public class FocusTestRoute : StatefulWidget
                                             {
                                                 Debug.Log($"onSubmitted value={value}");
                                             }
-                                        )
+                                        ),
+                                        new Container(
+                                            padding: EdgeInsets.fromLTRB(100.0f, 50.0f, 100.0f, 0.0f),
+                                            child: new Text(
+                                                data: "多行"
+                                            )
+                                        ),
+                                        multiLineText()
                                     }
                                 )
                             )
                         )
                     )
+                )
+            );
+        }
+
+        public Widget multiLineText()
+        {
+            return new Padding(
+                padding: EdgeInsets.fromLTRB(100.0f, 0.0f, 100.0f, 0.0f),
+                child: new TextField(
+                    keyboardType: TextInputType.multiline,
+                    textInputAction: TextInputAction.newline,
+                    textAlign: TextAlign.left,
+                    textDirection: TextDirection.ltr,
+                    minLines: 1,
+                    maxLines: 3
                 )
             );
         }
